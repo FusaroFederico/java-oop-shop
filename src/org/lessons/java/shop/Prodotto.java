@@ -13,7 +13,7 @@ public class Prodotto {
 	public Prodotto(String itemName, String itemDescription, double itemPrice,int itemVat) {
 		// new instance for random number
 		Random random = new Random();
-		// 8-digit random number
+		// max 8-digit random number
 		this.itemCode = 1 + random.nextInt(99999999);
 		
 		this.itemName = itemName;
@@ -51,5 +51,13 @@ public class Prodotto {
 	}
 	public void setItemVat(int itemVat) {
 		this.itemVat = itemVat;
+	}
+	// getGrossPrice method
+	public double getGrossPrice() {
+		return itemPrice + itemPrice * itemVat / 100;
+	}
+	// getFullName method
+	public String getFullName() {
+		return itemCode + "-" + itemName;
 	}
 }
