@@ -60,4 +60,8 @@ public class Prodotto {
 	public String getFullName() {
 		return itemCode + "-" + itemName;
 	}
+	// createPaddedCode
+	public static String createPaddedCode(int code) {
+		return String.format("%08d", code);
+	}
 }
