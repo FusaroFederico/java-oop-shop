@@ -32,7 +32,9 @@ public class Main {
 		System.out.println(prod1.getItemVat());
 		System.out.println(prod1.getGrossPrice());
 		System.out.println(prod1.getFullName());
-		
+		// test createPaddedCode
+		String paddedCode = Prodotto.createPaddedCode(prod1.getItemCode());
+		System.out.println(paddedCode);
 
 	}
 	
